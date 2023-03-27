@@ -1,5 +1,11 @@
+required_providers {
+  alicloud = {
+    source  = "aliyun/alicloud"
+    version = ">=1.64.0"
+  }
+}
+
 provider "alicloud" {
-  version                 = ">=1.64.0"
   profile                 = var.profile != "" ? var.profile : null
   shared_credentials_file = var.shared_credentials_file != "" ? var.shared_credentials_file : null
   region                  = var.region != "" ? var.region : null
